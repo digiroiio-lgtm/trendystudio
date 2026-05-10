@@ -21,12 +21,12 @@ export default function ProductCard({ product }: ProductCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="group relative"
+      className="group relative flex flex-col"
     >
-      <Link href={`/products/${product.slug}`}>
+      <Link href={`/products/${product.slug}`} className="flex flex-col h-full">
         {/* Image */}
         <div
-          className="relative aspect-square bg-[#F3F4F6] rounded-2xl overflow-hidden mb-4"
+          className="relative aspect-square w-full bg-[#F3F4F6] rounded-2xl overflow-hidden mb-4 flex-shrink-0"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
@@ -35,7 +35,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             alt={product.name}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-105"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             unoptimized
           />
 
@@ -90,22 +90,22 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Info */}
-        <div className="px-1">
+        <div className="px-1 flex flex-col flex-1">
           <p className="text-[10px] font-semibold text-[#6B7280] uppercase tracking-widest mb-1">
             {product.brand}
           </p>
-          <h3 className="text-sm font-semibold text-[#0F0F0F] mb-1.5 group-hover:text-[#7C3AED] transition-colors duration-200">
+          <h3 className="text-sm font-semibold text-[#0F0F0F] mb-1.5 group-hover:text-[#7C3AED] transition-colors duration-200 leading-snug">
             {product.name}
           </h3>
 
           {/* Rating */}
-          <div className="flex items-center gap-1.5 mb-2">
+          <div className="flex items-center gap-1.5 mb-2 mt-auto">
             <div className="flex items-center gap-0.5">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
                   size={11}
-                  className={i < Math.floor(product.rating) ? "fill-amber-400 text-amber-400" : "text-gray-200"}
+                  className={i < Math.floor(product.rating) ? "fill-amber-400 text-amber-400" : "text-gray-200 fill-gray-200"}
                 />
               ))}
             </div>

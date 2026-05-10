@@ -21,7 +21,7 @@ function SearchContent() {
     : [];
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="w-full min-h-screen bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-4xl font-black text-[#0F0F0F] mb-8 tracking-tight">Search</h1>
 

@@ -10,7 +10,7 @@ export default function WishlistPage() {
   const [wishlist] = useState(PRODUCTS.slice(0, 4));
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="w-full min-h-screen bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex items-center justify-between mb-10">
           <div>

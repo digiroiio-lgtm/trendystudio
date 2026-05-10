@@ -29,7 +29,7 @@ const team = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA]">
+    <div className="w-full min-h-screen bg-[#FAFAFA]">
       {/* Hero */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl">
