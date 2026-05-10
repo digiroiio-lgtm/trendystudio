@@ -23,14 +23,20 @@ function CollectionsContent() {
 
   const [activeCategory, setActiveCategory] = useState(categoryParam || "all");
   const [sortBy, setSortBy] = useState("featured");
-  const [maxPrice, setMaxPrice] = useState(500);
+  const [maxPrice, setMaxPrice] = useState(1000);
   const [showFilters, setShowFilters] = useState(false);
 
   const allCategories = [
     { name: "All", slug: "all" },
     { name: "Keyboards", slug: "keyboards" },
-    { name: "Accessories", slug: "accessories" },
+    { name: "Workspace", slug: "workspace" },
+    { name: "Creator Gear", slug: "creator-gear" },
+    { name: "Productivity", slug: "productivity" },
     { name: "Audio", slug: "audio" },
+    { name: "Lifestyle", slug: "lifestyle" },
+    { name: "Ergonomics", slug: "ergonomics" },
+    { name: "Digital", slug: "digital" },
+    { name: "Accessories", slug: "accessories" },
   ];
 
   const filteredProducts = useMemo(() => {
@@ -158,14 +164,14 @@ function CollectionsContent() {
               <input
                 type="range"
                 min={0}
-                max={500}
+                max={1000}
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
                 className="w-full max-w-xs accent-[#7C3AED]"
               />
               <div className="flex justify-between text-xs text-[#6B7280] max-w-xs mt-1">
                 <span>$0</span>
-                <span>$500</span>
+                <span>$1000</span>
               </div>
             </div>
           </motion.div>
@@ -182,7 +188,7 @@ function CollectionsContent() {
           <div className="text-center py-24">
             <p className="text-[#6B7280] text-lg">No products found.</p>
             <button
-              onClick={() => { setActiveCategory("all"); setMaxPrice(500); }}
+              onClick={() => { setActiveCategory("all"); setMaxPrice(1000); }}
               className="mt-4 text-[#7C3AED] font-medium hover:underline"
             >
               Clear filters
