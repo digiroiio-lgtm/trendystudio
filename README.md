@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TRENDY STUDIO
+
+A premium workspace & productivity lifestyle brand website built with Next.js 14, TailwindCSS, and Framer Motion.
+
+## Tech Stack
+
+- **Next.js 14** (App Router, TypeScript)
+- **TailwindCSS** — utility-first styling
+- **Framer Motion** — smooth animations
+- **lucide-react** — minimal icon set
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/
+│   ├── page.tsx              # Homepage (8 sections)
+│   ├── layout.tsx            # Root layout (Navbar, Footer, SEO)
+│   ├── about/page.tsx        # About page
+│   ├── collections/page.tsx  # Collections with filter/sort
+│   ├── contact/page.tsx      # Contact form
+│   ├── products/[slug]/      # Product detail page
+│   ├── search/page.tsx       # Search
+│   └── wishlist/page.tsx     # Saved items
+├── components/
+│   ├── layout/
+│   │   ├── AnnouncementBar.tsx  # Rotating announcements
+│   │   ├── Navbar.tsx           # Sticky navbar with blur
+│   │   ├── Footer.tsx           # Dark minimal footer
+│   │   ├── MobileMenu.tsx       # Slide-in mobile nav
+│   │   └── CartDrawer.tsx       # Right slide-in cart
+│   └── ui/
+│       └── ProductCard.tsx      # Hover image swap, quick-add
+└── lib/
+    └── constants.ts             # Products, categories, nav links
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Background**: `#FAFAFA` (soft off-white)
+- **Primary text**: `#0F0F0F`
+- **Muted text**: `#6B7280`
+- **Accent**: `#7C3AED` (purple)
+- **Cards**: white, `rounded-2xl`/`rounded-3xl`, subtle shadow
+- **Typography**: Inter, bold editorial headings
+- **Spacing**: Generous — `py-16` to `py-24`
 
-## Deploy on Vercel
+## Brand Positioning
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TRENDY STUDIO is a **premium workspace & productivity lifestyle brand** — not a gaming store.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Target audience: creators, developers, designers, remote workers, keyboard enthusiasts, aesthetic desk setup community.
